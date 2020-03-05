@@ -2,6 +2,14 @@
 # This is blackjack, a minigame in the BL_clone
 # Author: Jake Wagoner
 ##
+
+##
+# Planned features:
+#   - Currency, actual gambling
+#   - Sprites
+#   - Better dialogues / formatting
+##
+
 from deck import Deck
 from hand import Hand
 
