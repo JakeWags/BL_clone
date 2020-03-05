@@ -29,6 +29,9 @@ class Hand:
     def get_value(self):
         return self.value
 
+    def get_card(self, index):
+        return self.hand[index]
+
     def clear_hand(self):
         self.hand = []
 
@@ -46,6 +49,9 @@ class Hand:
         if self.value > 21 and self.has_ace() and self.current_ace_index < len(self.ace_indexes):
             self.__change_ace(self.hand[self.ace_indexes[self.current_ace_index]])
             self.__sum_values()
+
+    def __len__(self):
+        return len(self.hand)
 
     def __str__(self):
         ret_val = []
