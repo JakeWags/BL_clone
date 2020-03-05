@@ -3,7 +3,7 @@
 # Author: Jake Wagoner
 ##
 from random import randint
-from card import Card
+from .card import Card
 
 
 class Deck:

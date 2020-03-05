@@ -1,5 +1,5 @@
 ##
-# This is blackjack, a minigame in the BL_clone
+# This is blackjack, a mini-game in BL_clone
 # Author: Jake Wagoner
 ##
 
@@ -10,8 +10,8 @@
 #   - Better dialogues / formatting
 ##
 
-from deck import Deck
-from hand import Hand
+from .deck import Deck
+from .hand import Hand
 
 
 class Blackjack:
@@ -51,6 +51,10 @@ class Blackjack:
             if self.p_hand.get_value() > 21:
                 print("Bust! You went over 21.")
                 self.__lose()
+
+        print("\nWould you like to play again? (Y/N)")
+        if input("--> ") == "Y":
+            self.reset()
 
     def make_action(self):
         print("Would you like to hit or stay?")
@@ -116,9 +120,3 @@ class Blackjack:
     def reset(self):
         self.__init__()
         self.play()
-
-
-g = Blackjack()
-g.play()
-
-
